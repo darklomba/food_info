@@ -6,11 +6,10 @@ module FoodInfo
         class SearchResults < Hashie::Trash
           include Enumerable
           
-          property :results,  :from => :food
+          property :results,  :from => :foods
           property :page,     :from => :page_number
           property :per_page, :from => :max_results
           property :total_results
-          property :food
       
           def initialize(*args)
             super(*args)            
